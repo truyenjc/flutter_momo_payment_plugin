@@ -21,10 +21,10 @@ class MomoPaymentData {
     @required this.merchantname,
     @required this.merchantcode,
     @required this.amount,
-    @required this.orderId,
-    @required this.orderLabel,
     @required this.partnerCode,
     @required this.appScheme,
+    this.orderId,
+    this.orderLabel,
     this.merchantnamelabel,
     this.fee,
     this.description,
@@ -38,10 +38,6 @@ class MomoPaymentData {
               merchantcode.isNotEmpty &&
               amount != null &&
               amount > 0 &&
-              orderId != null &&
-              orderId.isNotEmpty &&
-              orderLabel != null &&
-              orderLabel.isNotEmpty &&
               partnerCode != null &&
               partnerCode.isNotEmpty &&
               appScheme != null &&
@@ -53,8 +49,6 @@ class MomoPaymentData {
       "merchantname": this.merchantname,
       "merchantcode": this.merchantcode,
       "amount": this.amount,
-      "orderId": this.orderId,
-      "orderLabel": this.orderLabel,
       "partnerCode": this.partnerCode,
       "fee": this.fee ?? 0,
       "isDevelopmentMode": isDevelopmentMode ?? false,
@@ -71,6 +65,12 @@ class MomoPaymentData {
     }
     if (merchantnamelabel != null) {
       json["merchantnamelabel"] = merchantnamelabel;
+    }
+    if (orderId != null) {
+      json["orderId"] = orderId;
+    }
+    if (orderLabel != null) {
+      json["orderLabel"] = orderLabel;
     }
 
     return json;

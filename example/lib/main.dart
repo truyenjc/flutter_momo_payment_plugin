@@ -32,17 +32,17 @@ class _MyAppState extends State<MyApp> {
                 child: Text('Payment with momo'),
                 onPressed: () async {
                   MomoPaymentData momoPaymentData = MomoPaymentData(
-                    appScheme: "your_appScheme",
-                    merchantname: "your_merchantname",
-                    merchantcode: 'your_merchantcode',
+                    appScheme: 'momoiqa420180417',
+                    merchantname: 'MoMoTest',
+                    merchantcode: 'MOMOIQA420180417',
                     amount: 2000,
-                    orderId: 'orderId',
-                    orderLabel: 'orderLabel',
-                    merchantnamelabel: "sdsds",
-                    fee: 200,
+                    orderId: 'aklsdlkasdashdhasd',
+                    orderLabel: 'Ma giao dich',
+                    merchantnamelabel: "Nha cung cap",
                     description: null,
                     requestId: 'requestId',
-                    partnerCode: 'your_partnerCode',
+                    partnerCode: 'MOMOIQA420180417',
+                    isDevelopmentMode: true,
                   );
 
                   MomoPaymentResult momoPaymentResult =
